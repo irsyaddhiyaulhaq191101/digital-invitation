@@ -2,7 +2,7 @@
 
 @section('container')
 
-{{-- @include('components.cover') --}}
+@include('components.cover')
 
 @include('components.navbar')
 @include('components.home')

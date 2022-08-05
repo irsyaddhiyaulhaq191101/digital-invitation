@@ -19,10 +19,10 @@
 
     <script>
     function scrollEvent() {
-      // window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
     }
-    // document.body.style.overflow = 'hidden';
-    // window.addEventListener('scroll', scrollEvent)
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('scroll', scrollEvent)
 
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
