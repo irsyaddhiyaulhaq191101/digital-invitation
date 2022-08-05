@@ -10,6 +10,7 @@
   </head>
   <body id="body">
     <input type="hidden" id="date" value="{{ $mount }} {{ $date }}, {{ $year }} {{ $time }}">
+    <audio src="sound.mp3" autoplay="autoplay"></audio>
 
     @yield('container')
 
