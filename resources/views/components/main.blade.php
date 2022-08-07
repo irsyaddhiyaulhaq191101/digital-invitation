@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body id="body">
+  <body>
     <input type="hidden" id="date" value="{{ $mount }} {{ $date }}, {{ $year }} {{ $time }}">
-    <audio src="sound.mp3" autoplay="autoplay"></audio>
+    <audio autoplay id="audio">
+      <source src="/sound/sound.mp3" type="audio/mpeg">
+      Browsermu tidak mendukung tag audio, upgrade donk!
+    </audio>
 
     @yield('container')
 
@@ -19,6 +22,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script>
+    var audio = document.getElementById('audio');
+
     function scrollEvent() {
       window.scrollTo(0, 0)
     }
@@ -37,7 +42,7 @@
       navbar.hidden = false;
       window.removeEventListener('scroll', scrollEvent)
       document.body.style.overflow = 'visible';
-
+      audio.play();
     })
 
     // Mengatur waktu akhir perhitungan mundur
